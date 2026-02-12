@@ -1,0 +1,757 @@
+/* =========================================
+   MASTER CSS FRAMEWORK — FULL VERSION
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ================= ROOT VARIABLES ================= */
+
+:root {
+
+    /* COLORS */
+    --primary-color: #2563eb;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #06b6d4;
+
+    --white-color: #ffffff;
+    --black-color: #000000;
+
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --gray-900: #111827;
+
+    /* SPACING SCALE */
+    --space-10: 10px;
+    --space-20: 20px;
+    --space-30: 30px;
+    --space-40: 40px;
+    --space-50: 50px;
+    --space-60: 60px;
+
+    /* FONT SIZE */
+    --font-12: 12px;
+    --font-14: 14px;
+    --font-16: 16px;
+    --font-18: 18px;
+    --font-20: 20px;
+    --font-24: 24px;
+    --font-28: 28px;
+    --font-32: 32px;
+    --font-36: 36px;
+    --font-40: 40px;
+    --font-48: 48px;
+    --font-56: 56px;
+    --font-60: 60px;
+
+    /* FONT WEIGHT */
+    --fw-100: 100;
+    --fw-200: 200;
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    --fw-900: 900;
+
+    /* BORDER + RADIUS */
+    --border-default: 1px solid var(--gray-200);
+    --radius-small: 4px;
+    --radius-medium: 8px;
+    --radius-large: 14px;
+    --radius-full: 9999px;
+
+    /* SHADOW */
+    --shadow-default: 0 4px 6px rgba(0, 0, 0, .1);
+
+    /* WIDTH / HEIGHT */
+    --width-100: 100px;
+    --width-150: 150px;
+    --width-200: 200px;
+    --width-250: 250px;
+    --width-300: 300px;
+    --width-400: 400px;
+    --width-500: 500px;
+    --width-600: 600px;
+    --width-700: 700px;
+    --width-800: 800px;
+    --width-900: 900px;
+    --width-full: 100%;
+
+    --height-50: 50px;
+    --height-100: 100px;
+    --height-150: 150px;
+    --height-200: 200px;
+    --height-250: 250px;
+    --height-300: 300px;
+    --height-400: 400px;
+    --height-500: 500px;
+    --height-600: 600px;
+
+    --max-width-100: 100px;
+    --max-width-200: 200px;
+    --max-width-300: 300px;
+    --max-width-400: 400px;
+    --max-width-500: 500px;
+    --max-width-600: 600px;
+    --max-width-700: 700px;
+    --max-width-800: 800px;
+    --max-width-900: 900px;
+    --max-width-full: 100%;
+
+    --max-height-100: 100px;
+    --max-height-200: 200px;
+    --max-height-300: 300px;
+    --max-height-400: 400px;
+    --max-height-500: 500px;
+    --max-height-600: 600px;
+    --max-height-full: 100%;
+
+}
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ================= CURSOR ================= */
+.cursor-pointer,
+a,
+button,
+li,
+label,
+select {
+    cursor: pointer;
+}
+
+/* ================= DISPLAY ================= */
+.display-flex {
+    display: flex;
+}
+
+.display-grid {
+    display: grid;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-none {
+    display: none;
+}
+
+/* ================= FLEX ================= */
+.flex-direction-row {
+    flex-direction: row;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.flex-wrap-enable {
+    flex-wrap: wrap;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-start {
+    justify-content: flex-start;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.align-items-end {
+    align-items: flex-end;
+}
+
+.flex-center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= GAP ================= */
+.gap-10 {
+    gap: var(--space-10);
+}
+
+.gap-20 {
+    gap: var(--space-20);
+}
+
+.gap-30 {
+    gap: var(--space-30);
+}
+
+.gap-40 {
+    gap: var(--space-40);
+}
+
+.gap-50 {
+    gap: var(--space-50);
+}
+
+.gap-60 {
+    gap: var(--space-60);
+}
+
+/* ================= PADDING ================= */
+.padding-10 {
+    padding: var(--space-10);
+}
+
+.padding-20 {
+    padding: var(--space-20);
+}
+
+.padding-30 {
+    padding: var(--space-30);
+}
+
+.padding-40 {
+    padding: var(--space-40);
+}
+
+.padding-50 {
+    padding: var(--space-50);
+}
+
+.padding-60 {
+    padding: var(--space-60);
+}
+
+/* ================= MARGIN ================= */
+.margin-10 {
+    margin: var(--space-10);
+}
+
+.margin-20 {
+    margin: var(--space-20);
+}
+
+.margin-30 {
+    margin: var(--space-30);
+}
+
+.margin-40 {
+    margin: var(--space-40);
+}
+
+.margin-50 {
+    margin: var(--space-50);
+}
+
+.margin-60 {
+    margin: var(--space-60);
+}
+
+.margin-x-20 {
+    margin-left: var(--space-20);
+    margin-right: var(--space-20);
+}
+
+.margin-y-20 {
+    margin-top: var(--space-20);
+    margin-bottom: var(--space-20);
+}
+
+/* ================= WIDTH / HEIGHT ================= */
+.width-100 {
+    width: var(--width-100);
+}
+
+.width-150 {
+    width: var(--width-150);
+}
+
+.width-200 {
+    width: var(--width-200);
+}
+
+.width-250 {
+    width: var(--width-250);
+}
+
+.width-300 {
+    width: var(--width-300);
+}
+
+.width-400 {
+    width: var(--width-400);
+}
+
+.width-500 {
+    width: var(--width-500);
+}
+
+.width-600 {
+    width: var(--width-600);
+}
+
+.width-700 {
+    width: var(--width-700);
+}
+
+.width-800 {
+    width: var(--width-800);
+}
+
+.width-900 {
+    width: var(--width-900);
+}
+
+.width-full {
+    width: var(--width-full);
+}
+
+.height-50 {
+    height: var(--height-50);
+}
+
+.height-100 {
+    height: var(--height-100);
+}
+
+.height-150 {
+    height: var(--height-150);
+}
+
+.height-200 {
+    height: var(--height-200);
+}
+
+.height-250 {
+    height: var(--height-250);
+}
+
+.height-300 {
+    height: var(--height-300);
+}
+
+.height-400 {
+    height: var(--height-400);
+}
+
+.height-500 {
+    height: var(--height-500);
+}
+
+.height-600 {
+    height: var(--height-600);
+}
+
+.max-width-100 {
+    max-width: var(--max-width-100);
+}
+
+.max-width-200 {
+    max-width: var(--max-width-200);
+}
+
+.max-width-300 {
+    max-width: var(--max-width-300);
+}
+
+.max-width-400 {
+    max-width: var(--max-width-400);
+}
+
+.max-width-500 {
+    max-width: var(--max-width-500);
+}
+
+.max-width-600 {
+    max-width: var(--max-width-600);
+}
+
+.max-width-700 {
+    max-width: var(--max-width-700);
+}
+
+.max-width-800 {
+    max-width: var(--max-width-800);
+}
+
+.max-width-900 {
+    max-width: var(--max-width-900);
+}
+
+.max-width-full {
+    max-width: var(--max-width-full);
+}
+
+.max-height-100 {
+    max-height: var(--max-height-100);
+}
+
+.max-height-200 {
+    max-height: var(--max-height-200);
+}
+
+.max-height-300 {
+    max-height: var(--max-height-300);
+}
+
+.max-height-400 {
+    max-height: var(--max-height-400);
+}
+
+.max-height-500 {
+    max-height: var(--max-height-500);
+}
+
+.max-height-600 {
+    max-height: var(--max-height-600);
+}
+
+.max-height-full {
+    max-height: var(--max-height-full);
+}
+
+/* ================= TEXT ================= */
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+/* ================= FONT ================= */
+.font-size-12 {
+    font-size: var(--font-12);
+}
+
+.font-size-14 {
+    font-size: var(--font-14);
+}
+
+.font-size-16 {
+    font-size: var(--font-16);
+}
+
+.font-size-18 {
+    font-size: var(--font-18);
+}
+
+.font-size-20 {
+    font-size: var(--font-20);
+}
+
+.font-size-24 {
+    font-size: var(--font-24);
+}
+
+.font-size-28 {
+    font-size: var(--font-28);
+}
+
+.font-size-32 {
+    font-size: var(--font-32);
+}
+
+.font-size-36 {
+    font-size: var(--font-36);
+}
+
+.font-size-40 {
+    font-size: var(--font-40);
+}
+
+.font-size-48 {
+    font-size: var(--font-48);
+}
+
+.font-size-56 {
+    font-size: var(--font-56);
+}
+
+.font-size-60 {
+    font-size: var(--font-60);
+}
+
+.font-weight-100 {
+    font-weight: var(--fw-100);
+}
+
+.font-weight-200 {
+    font-weight: var(--fw-200);
+}
+
+.font-weight-300 {
+    font-weight: var(--fw-300);
+}
+
+.font-weight-400 {
+    font-weight: var(--fw-400);
+}
+
+.font-weight-500 {
+    font-weight: var(--fw-500);
+}
+
+.font-weight-600 {
+    font-weight: var(--fw-600);
+}
+
+.font-weight-700 {
+    font-weight: var(--fw-700);
+}
+
+.font-weight-800 {
+    font-weight: var(--fw-800);
+}
+
+.font-weight-900 {
+    font-weight: var(--fw-900);
+}
+
+/* ================= COLORS ================= */
+.text-color-primary {
+    color: var(--primary-color);
+}
+
+.text-color-gray {
+    color: var(--gray-500);
+}
+
+.text-color-white {
+    color: var(--white-color);
+}
+
+.background-primary {
+    background: var(--primary-color);
+}
+
+.background-success {
+    background: var(--success-color);
+}
+
+.background-danger {
+    background: var(--danger-color);
+}
+
+.background-gray {
+    background: var(--gray-100);
+}
+
+.background-white {
+    background: var(--white-color);
+}
+
+/* ================= BORDER ================= */
+.border-default {
+    border: var(--border-default);
+}
+
+.border-radius-small {
+    border-radius: var(--radius-small);
+}
+
+.border-radius-medium {
+    border-radius: var(--radius-medium);
+}
+
+.border-radius-large {
+    border-radius: var(--radius-large);
+}
+
+.border-radius-full {
+    border-radius: var(--radius-full);
+}
+
+/* ================= SHADOW ================= */
+.box-shadow-default {
+    box-shadow: var(--shadow-default);
+}
+
+/* ================= COMPONENTS ================= */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-left: var(--space-20);
+    padding-right: var(--space-20);
+}
+
+.card-component {
+    background: var(--white-color);
+    border: var(--border-default);
+    border-radius: var(--radius-medium);
+    padding: var(--space-20);
+    box-shadow: var(--shadow-default);
+}
+
+/* ================= BUTTON ================= */
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius-medium);
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.button-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.button-primary:hover {
+    opacity: .85;
+}
+
+/* ================= GRID ================= */
+.grid-two-columns {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-columns {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-columns {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ================= TRANSITIONS ================= */
+.transition-fast {
+    transition: all .2s ease;
+}
+
+.transition-medium {
+    transition: all .3s ease;
+}
+
+.transition-slow {
+    transition: all .5s ease;
+}
+
+/* ================= TRANSFORM / HOVER / ACTIVE ================= */
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+}
+
+.hover-opacity:hover {
+    opacity: .85;
+}
+
+.active-press:active {
+    transform: scale(.96);
+}
+
+.focus-outline:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ================= KEYFRAMES / ANIMATION ================= */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pop-in {
+    from {
+        opacity: 0;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fade-in {
+    animation: fade-in .5s ease forwards;
+}
+
+.animate-slide-up {
+    animation: slide-up .6s ease forwards;
+}
+
+.animate-pop-in {
+    animation: pop-in .4s ease forwards;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:768px) {
+    .grid-four-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-three-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mobile-flex-column {
+        flex-direction: column;
+    }
+}
